@@ -36,7 +36,7 @@ namespace TestProducer.SinglePartition
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     producer.SendMessageAsync("SinglePartition", new[] { new Message(message) });
                     Console.ForegroundColor = ConsoleColor.White;
-                    Thread.Sleep(random.Next(0, 500));
+                    Thread.Sleep(random.Next(0, 10));
                 }
             }
             catch (Exception ex)

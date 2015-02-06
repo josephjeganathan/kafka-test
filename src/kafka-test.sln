@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProducer.SinglePartitio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsumer.ConsumerGroup.SinglePartition", "TestConsumer.ConsumerGroup.SinglePartition\TestConsumer.ConsumerGroup.SinglePartition.csproj", "{B55FD12D-6BC7-45C0-A5B0-BBD140E1FCA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLog.Loader", "TestLog.Loader\TestLog.Loader.csproj", "{0EDE21EC-E39C-4475-B99A-76ACC6C9AE46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B55FD12D-6BC7-45C0-A5B0-BBD140E1FCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B55FD12D-6BC7-45C0-A5B0-BBD140E1FCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B55FD12D-6BC7-45C0-A5B0-BBD140E1FCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDE21EC-E39C-4475-B99A-76ACC6C9AE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDE21EC-E39C-4475-B99A-76ACC6C9AE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDE21EC-E39C-4475-B99A-76ACC6C9AE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDE21EC-E39C-4475-B99A-76ACC6C9AE46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

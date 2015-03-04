@@ -12,7 +12,7 @@ namespace TestProducer.SinglePartition
 {
     /// <summary>
     /// Single Partition topic
-    /// bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 3 --partitions 1 --topic SinglePartition
+    /// bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic SinglePartition
     /// </summary>
     class Program
     {

@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="kafka-net">
-      <HintPath>..\packages\kafka-net.0.8.0.109\lib\net45\kafka-net.dll</HintPath>
+    <Reference Include="kafka-net, Version=0.8.0.112, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\kafka-net.0.8.0.112\lib\net45\kafka-net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>

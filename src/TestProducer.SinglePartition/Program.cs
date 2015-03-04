@@ -45,7 +45,7 @@ namespace TestProducer.SinglePartition
             }
             finally
             {
-                Console.ReadLine();
+                ConsoleLog.WaitOnKeys();
             }
         }
     }

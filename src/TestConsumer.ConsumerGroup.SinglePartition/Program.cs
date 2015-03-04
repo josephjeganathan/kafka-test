@@ -40,7 +40,7 @@ namespace TestConsumer.ConsumerGroup.SinglePartition
             }
             finally
             {
-                Console.ReadLine();
+                ConsoleLog.WaitOnKeys();
             }
         }
 

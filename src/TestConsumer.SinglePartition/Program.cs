@@ -24,7 +24,7 @@ namespace TestConsumer.SinglePartition
             }
             finally
             {
-                Console.ReadLine();
+                ConsoleLog.WaitOnKeys();
             }
         }
 

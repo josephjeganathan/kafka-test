@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using KafkaNet;
 using KafkaNet.Model;
@@ -10,9 +12,9 @@ namespace MultiPartition.PubSub
 {
     public partial class Main : Form
     {
-        private readonly List<Subscriber> _subscribers = new List<Subscriber>();
         private Producer _producer;
         private int i = 0;
+        private const string Topic = "MultiPartition";
 
         public Main()
         {
@@ -21,9 +23,7 @@ namespace MultiPartition.PubSub
 
         private void buttonConsumer_Click(object sender, EventArgs e)
         {
-            var subscriber = new Subscriber();
-            _subscribers.Add(subscriber);
-            subscriber.Show();
+            Process.Start(Path.GetFullPath("../../../MultiPartition.PubSub.Subscriber/bin/Debug/MultiPartition.PubSub.Subscriber.exe"));
         }
 
         private void buttonSendMessage_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace MultiPartition.PubSub
             i++;
             string message = string.Format("{0} - {1}", DateTime.UtcNow.ToString("O"), i);
             AppendMessage(message);
-            _producer.SendMessageAsync("MultiPartition", new[] { new KafkaMessage(message) });
+            _producer.SendMessageAsync(Topic, new[] { new KafkaMessage(message) });
         }
 
         private void AppendMessage(string message)

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLog.Loader", "TestLog.L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPartition.PubSub", "MultiPartition.PubSub\MultiPartition.PubSub.csproj", "{B2464F23-B30A-4E06-9FF7-972C58DD3BAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPartition.PubSub.Subscriber", "MultiPartition.PubSub.Subscriber\MultiPartition.PubSub.Subscriber.csproj", "{EA24993F-BB45-415C-8568-2330DB2999C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B2464F23-B30A-4E06-9FF7-972C58DD3BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2464F23-B30A-4E06-9FF7-972C58DD3BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2464F23-B30A-4E06-9FF7-972C58DD3BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA24993F-BB45-415C-8568-2330DB2999C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA24993F-BB45-415C-8568-2330DB2999C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA24993F-BB45-415C-8568-2330DB2999C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA24993F-BB45-415C-8568-2330DB2999C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

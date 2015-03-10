@@ -37,7 +37,7 @@ namespace Test.Common
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 if (keyInfo.Modifiers == ConsoleModifiers.Control)
                 {
-                    if (keyInfo.Key == ConsoleKey.D) break;
+                    if (keyInfo.Key == ConsoleKey.D || keyInfo.Key == ConsoleKey.C) break;
                     if (keyInfo.Key == ConsoleKey.L) Console.Clear();
                     if (keyInfo.Key == ConsoleKey.T) ToggleNoice();
                 }

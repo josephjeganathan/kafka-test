@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPartition.PubSub", "Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPartition.PubSub.Subscriber", "MultiPartition.PubSub.Subscriber\MultiPartition.PubSub.Subscriber.csproj", "{EA24993F-BB45-415C-8568-2330DB2999C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Client", "Confluent.Client\Confluent.Client.csproj", "{F93CB951-F110-4422-8EB5-EA1000CED603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Publisher", "Confluent.Publisher\Confluent.Publisher.csproj", "{5C58E37E-9934-408D-B544-842988942CE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{EA24993F-BB45-415C-8568-2330DB2999C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA24993F-BB45-415C-8568-2330DB2999C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA24993F-BB45-415C-8568-2330DB2999C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93CB951-F110-4422-8EB5-EA1000CED603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93CB951-F110-4422-8EB5-EA1000CED603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93CB951-F110-4422-8EB5-EA1000CED603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93CB951-F110-4422-8EB5-EA1000CED603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C58E37E-9934-408D-B544-842988942CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C58E37E-9934-408D-B544-842988942CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C58E37E-9934-408D-B544-842988942CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C58E37E-9934-408D-B544-842988942CE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Client", "Conflue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Publisher", "Confluent.Publisher\Confluent.Publisher.csproj", "{5C58E37E-9934-408D-B544-842988942CE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Consumer", "Confluent.Consumer\Confluent.Consumer.csproj", "{BBC87519-9B2A-463F-9047-50FC9C76FB36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5C58E37E-9934-408D-B544-842988942CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C58E37E-9934-408D-B544-842988942CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C58E37E-9934-408D-B544-842988942CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC87519-9B2A-463F-9047-50FC9C76FB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC87519-9B2A-463F-9047-50FC9C76FB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC87519-9B2A-463F-9047-50FC9C76FB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC87519-9B2A-463F-9047-50FC9C76FB36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

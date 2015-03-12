@@ -1,47 +1,18 @@
 ﻿using System;
 using System.Threading;
+using System.Windows.Forms;
 using Confluent.Client;
 
 namespace Confluent.Publisher
 {
     class Program
     {
-        private const string Topic = "SinglePartition";
-
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            try
-            {
-                var client = new ConfluentClient();
-                int i = 0;
-                var random = new Random();
-                while (true)
-                {
-                    i++;
-                    string name = string.Format("[{0}] {1}", i, Guid.NewGuid().ToString("N"));
-                    string response = client.Publish(Topic, new[] { new Person { Name = name, Age = random.Next(20, 100) } }).Result;
-
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    ConsoleLog.Log(response);
-                    Console.ForegroundColor = ConsoleColor.White;
-                    
-                    Thread.Sleep(random.Next(0, 10));
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                ConsoleLog.WaitOnKeys();
-            }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new PublisherApp());
         }
-    }
-
-    public class Person
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
     }
 }

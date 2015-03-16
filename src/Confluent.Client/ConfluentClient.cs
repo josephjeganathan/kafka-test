@@ -13,11 +13,6 @@ namespace Confluent.Client
     {
         private const string ContentType = "application/vnd.kafka.binary.v1+json";
         private readonly HttpClient _client;
-
-        public ConfluentClient()
-            : this("http://localhost:8082")
-        {
-        }
         
         public ConfluentClient(string baseUrl)
         {

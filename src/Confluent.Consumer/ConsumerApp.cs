@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Confluent.Client;
@@ -12,7 +13,7 @@ namespace Confluent.Consumer
         public ConsumerApp()
         {
             InitializeComponent();
-            _client = new ConfluentClient();
+            _client = new ConfluentClient(ConfigurationManager.AppSettings["Confluent.BaseUrl"]);
         }
 
         private void buttonStart_Click(object sender, EventArgs e)

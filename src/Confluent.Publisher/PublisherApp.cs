@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Configuration;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Confluent.Client;
@@ -23,7 +19,7 @@ namespace Confluent.Publisher
         public PublisherApp()
         {
             InitializeComponent();
-            _client = new ConfluentClient();
+            _client = new ConfluentClient(ConfigurationManager.AppSettings["Confluent.BaseUrl"]);
         }
 
         private void textBoxNumberOfMsg_KeyPress(object sender, KeyPressEventArgs e)

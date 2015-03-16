@@ -13,11 +13,17 @@ namespace Confluent.Client
     {
         private const string ContentType = "application/vnd.kafka.binary.v1+json";
         private readonly HttpClient _client;
+
         public ConfluentClient()
+            : this("http://localhost:8082")
+        {
+        }
+        
+        public ConfluentClient(string baseUrl)
         {
             _client = new HttpClient
             {
-                BaseAddress = new Uri("http://localhost:8082")
+                BaseAddress = new Uri(baseUrl)
             };
         }
 

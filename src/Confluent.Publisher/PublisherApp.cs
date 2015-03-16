@@ -80,7 +80,13 @@ namespace Confluent.Publisher
         {
             foreach (Process process in _processes)
             {
-                process.Kill();
+                try
+                {
+                    process.Kill();
+                }
+                catch (Exception)
+                {
+                }
             }
         }
     }

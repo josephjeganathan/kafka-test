@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Consumer", "Confl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Performance", "Confluent.Performance\Confluent.Performance.csproj", "{9122C1C9-5707-4CA7-8138-DD0DB0F48EB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confluent.Avro", "Confluent.Avro\Confluent.Avro.csproj", "{C822A29A-122C-4BC2-81A3-B4320E9C62F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{9122C1C9-5707-4CA7-8138-DD0DB0F48EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9122C1C9-5707-4CA7-8138-DD0DB0F48EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9122C1C9-5707-4CA7-8138-DD0DB0F48EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C822A29A-122C-4BC2-81A3-B4320E9C62F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C822A29A-122C-4BC2-81A3-B4320E9C62F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C822A29A-122C-4BC2-81A3-B4320E9C62F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C822A29A-122C-4BC2-81A3-B4320E9C62F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

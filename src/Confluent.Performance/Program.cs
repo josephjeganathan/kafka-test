@@ -49,6 +49,7 @@ namespace Confluent.Performance
             }
             catch (Exception ex)
             {
+                timer.Change(Timeout.Infinite, Timeout.Infinite);
                 Console.WriteLine(ex);
             }
             finally

@@ -34,8 +34,9 @@
             this.textBoxConsumerGroup = new System.Windows.Forms.TextBox();
             this.textBoxConsumerId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonOffSet = new System.Windows.Forms.Button();
             this.textBoxMessages = new System.Windows.Forms.TextBox();
+            this.labelCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxTopic
@@ -89,16 +90,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Consumer Id:";
             // 
-            // buttonStart
+            // buttonOffSet
             // 
-            this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStart.Location = new System.Drawing.Point(567, 6);
-            this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(109, 72);
-            this.buttonStart.TabIndex = 3;
-            this.buttonStart.Text = "Start";
-            this.buttonStart.UseVisualStyleBackColor = true;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            this.buttonOffSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOffSet.Location = new System.Drawing.Point(567, 6);
+            this.buttonOffSet.Name = "buttonOffSet";
+            this.buttonOffSet.Size = new System.Drawing.Size(109, 72);
+            this.buttonOffSet.TabIndex = 3;
+            this.buttonOffSet.Text = "Start";
+            this.buttonOffSet.UseVisualStyleBackColor = true;
+            this.buttonOffSet.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // textBoxMessages
             // 
@@ -113,13 +114,23 @@
             this.textBoxMessages.Size = new System.Drawing.Size(663, 382);
             this.textBoxMessages.TabIndex = 4;
             // 
+            // labelCount
+            // 
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCount.Location = new System.Drawing.Point(331, 6);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(202, 72);
+            this.labelCount.TabIndex = 5;
+            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ConsumerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 478);
+            this.Controls.Add(this.labelCount);
             this.Controls.Add(this.textBoxMessages);
-            this.Controls.Add(this.buttonStart);
+            this.Controls.Add(this.buttonOffSet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -141,8 +152,9 @@
         private System.Windows.Forms.TextBox textBoxConsumerGroup;
         private System.Windows.Forms.TextBox textBoxConsumerId;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button buttonOffSet;
         private System.Windows.Forms.TextBox textBoxMessages;
+        private System.Windows.Forms.Label labelCount;
     }
 }
 

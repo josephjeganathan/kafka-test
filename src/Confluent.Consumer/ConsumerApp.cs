@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Confluent.Client;
+using Newtonsoft.Json;
 
 namespace Confluent.Consumer
 {
@@ -18,7 +21,7 @@ namespace Confluent.Consumer
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            buttonStart.Enabled = false;
+            buttonOffSet.Enabled = false;
 
             Task.Run(() =>
             {
@@ -37,8 +40,11 @@ namespace Confluent.Consumer
                     else
                     {
                         PrependMessage(content);
+                        PrependMessage("---");
                         string commitMessage = _client.CommitOffSet(textBoxConsumerGroup.Text, textBoxConsumerId.Text).Result;
-                        PrependMessage(commitMessage);
+
+                        var offsets = JsonConvert.DeserializeObject<List<Offset>>(commitMessage);
+                        UpdateLable(offsets.Select(o => string.Format("{0}: {1}, {2}", o.Partition, o.Consumed, o.Committed)));
                     }
                 }
             });
@@ -58,5 +64,35 @@ namespace Confluent.Consumer
                 textBoxMessages.Text = string.Format("{0}\r\n{1}", message, textBoxMessages.Text);
             }
         }
+
+        private void UpdateLable(IEnumerable<string> offsets)
+        {
+            if (textBoxMessages.InvokeRequired)
+            {
+                textBoxMessages.BeginInvoke((MethodInvoker)delegate
+                {
+                    labelCount.Text = string.Join("\r\n", offsets);
+                });
+            }
+            else
+            {
+                labelCount.Text = string.Join("\r\n", offsets);
+            }
+        }
+    }
+
+    public class Offset
+    {
+        [JsonProperty(PropertyName = "topic")]
+        public string Topic { get; set; }
+
+        [JsonProperty(PropertyName = "partition")]
+        public int Partition { get; set; }
+
+        [JsonProperty(PropertyName = "consumed")]
+        public long Consumed { get; set; }
+
+        [JsonProperty(PropertyName = "committed")]
+        public long Committed { get; set; }
     }
 }

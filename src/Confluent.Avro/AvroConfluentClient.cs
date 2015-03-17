@@ -28,8 +28,9 @@ namespace Confluent.Avro
             var request = new PublishRequest<Person>
             {
                 Records = people.Select(p => new Record<Person>{Value = p}).ToList(),
-                Schema = Person.Schema.Replace("\"\"", "\\\"")
+                Schema = Person.Schema
             };
+
             string content = JsonConvert.SerializeObject(request);
             HttpResponseMessage responseMessage = await SendRequest(HttpMethod.Post, requestUri, content);
 
